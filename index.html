@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="script.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <div class="maindiv">
+        <title>Simple Interest Calculator</title>
+        <h1>Simple Interest Calculator</h1><br>
+        <div class="row">
+            <div class="column">
+                <h3>Enter your specified values:</h3>
+                Principal <input type="number"  id="principal">  <br/>
+                Rate <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()"> <span id="rate_val">10.25</span>% <br/>
+                No. of Years <select id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="column">
+                <h3>Here are the results of your input:</h3>
+                You deposited $<span id="principal_txt">0</span> at an interest rate of <span id="rate_txt">0</span>% over <span id="years_txt">0</span> years concluding in <span id="year">2022</span>.<br>
+                Your Amount: <b>$<span id="amount">0.00</span></b><br>
+                Your Interest: <b>$<span id="interest">0.00</span></b><br><br>
+            
+            </div>
+        </div>
+        <div class="row" style="background-color: white; border-style: none;">
+            <div class="column">
+                <button class="button-4" role="button" onclick="compute()">Simple interest</button>
+            </div>
+            <div class="column">
+                <button class="button-4" role="button" onclick="graph()">Generate graph</button>
+            </div>
+        </div>
+        <figure>
+            <div id="container"></div>
+        </figure>
+
+    </div>
+</html>
